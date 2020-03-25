@@ -1,0 +1,59 @@
+Point technique Java : 
+
+1) download VScode extension : 
+
+a) Language support for Java
+b) Maven For Java
+c) Spring Intializr
+d) Java Extension Pack
+
+2) Install jdk 
+
+a) https://jdk.java.net/14/
+b) Define JAVA_HOME in env variables
+c) reboot VScode
+
+3) Create new project using spring initialize ( Ctrl + Shift + P ==> Follow the wizzard ), use Spring Web,Spring Data, H2
+4) Maven clean
+5) Maven Install .
+6) Import Swagger
+
+	<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+
+7) add @EnableSwagger2 to Main class
+
+Tada 
+
+3) Configure H2 
+
+a) 
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.datasource.url=jdbc:h2:file:///c:/Users/relmn/Desktop/PointTechniqueSpringBoot/data
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+b) Launch application, test H2 Console 
+
+4) Create your first entitys 
+
+a) Employee.java
+b) EmployeeRepository.java
+c) EmployeeRepositoryCustom.java
+d) EmployeeRepositoryCustomImpl.java
+
+5) The controller : 
+
+a) 
